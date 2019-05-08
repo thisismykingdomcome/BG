@@ -15,3 +15,174 @@
 .title_Top .child a:hover img{
     opacity: 0.8;
 }
+.title{
+    width:100%;
+    border-bottom:1px solid #b6b4b6;
+}
+.title .titleBox{
+    width:1200px;
+    height:32px;
+    font-size:11px;
+    color:#b6b4b6;
+    margin:0 auto;
+}
+.titleBox p{/*title左边的部分*/
+    float:left;
+    line-height:32px;
+}
+.titleBox .right_box{/*title右边的部分*/
+    float:right;
+    margin-right:15px;
+    height:32px;
+    width:auto;
+}
+.titleBox .right_box a{
+    display:block;
+    color:#b6b4b6;
+    float:left;
+    line-height:32px;
+}
+.rtbox1{/*title里登入*/
+    float:left;
+    position: relative;
+    
+}
+.titleBox .rtbox1 .select{/*登录按钮里隐藏的盒子*/
+    display:none;
+    position:absolute;
+    width:100px;
+    height:104px;
+    border:1px solid #b5b5b5;
+    top:24px;
+    left:-1px;
+    padding:17px 0 16px 13px;
+    font-size:13px;
+    z-index: 11;
+    background:white
+}
+.select a{
+    line-height:28px;
+    color: #000000!important;
+    float:left;
+}
+.select a:hover{
+    color:#b5b5b5!important;
+}
+.rtbox1:hover{
+    border-left:1px solid #b5b5b5;
+    border-right:1px solid #b5b5b5;
+    color:#666666;
+    margin:0 -1px;
+}
+
+.rtbox1 .enter{/*登入按钮*/
+    height:32px;
+    padding:0 15px;
+    position: relative;
+    z-index: 111111;
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
+    background: white;
+}
+/*********************************************************/
+.rtbox1+a:hover{/*注册*/
+    color:#666666;
+}
+.rtbox1+a{
+    margin:0 10px;
+}
+.rtbox2{/*我的邦购*/
+    float:left;
+    width:83px;
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
+    position: relative;
+}
+.rtbox2 .myBG{
+    display:none;
+    width:68px;
+    border:1px solid #b5b5b5;
+    border-top:none;
+    position: absolute;
+    top:32px;
+    left:-1px;
+    padding-left:15px;
+    
+}
+.rtbox2 .myBG a{
+    color:#000000!important;
+}
+.rtbox2:hover{
+    border-left:1px solid #b5b5b5;
+    border-right:1px solid #b5b5b5;
+}
+.rtbox2:hover .myBG{
+    display:block;    
+}
+.rtbox2 .myBG a:hover{
+    color:#b5b5b5!important;
+}
+.rtbox2 .bg{
+    padding:0 15px;
+}
+.rtbox2+a{/*会员中心*/
+    padding:0 5px;
+
+}
+.rtbox3{/*下载app**/
+    float:left;
+    position: relative;
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
+    background:white;
+    z-index: 10;
+}
+.rtbox3:hover{
+    border-left:1px solid #b5b5b5;
+    border-right:1px solid #b5b5b5;
+}
+.rtbox3:hover img{
+    display:block;
+}
+.rtbox3 img{
+    display: none;
+    position: absolute;
+    top:27px;
+    left:-1px;
+    border:1px solid #b5b5b5;
+    background:white;
+    z-index:99;
+}
+.rebox3:hover img{
+    display:block;
+}
+.rtbox3 a{
+    width:94px;
+    text-align:center;
+    background:white;
+    z-index:999999;
+    position: relative;
+}
+.right_box .weibo{
+    margin-left:5px;
+}
+.right_box a:hover{
+    color:#666666;
+}
+.right_box .weixin{
+    margin-left:5px;
+}
+.rtbox4 img{
+    display:none;
+    position: absolute;
+    top:30px;
+    left:-30px;
+}
+.rtbox4{
+    position: relative;
+    float:left;
+}
+.rtbox4:hover img{
+    display:block;
+}
+
