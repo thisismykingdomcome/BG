@@ -1,0 +1,11 @@
+html,body,div,a,ul,li,ol,dl,dd,dt,form,input,img,span,p,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+#wrap {
+    width: 1263px;
+}
+#wrap .nav {
+    height: 123px;
+    background: #fff;
+}
