@@ -1,0 +1,28 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,tr,td,dl,dd,dt,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;}
+a{color:#172c45;text-decoration:none} 
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+a:hover{color:#cd0200;text-decoration:underline} 
+em{font-style:normal}
+i{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+.ind{text-indent:2em} 
+.ind10{text-indent:10px;}
+.noborder{border:0;}
+.clearfix:after{content:"";display: block;height: 0;clear:both;overflow:hidden;visibility:hidden;font-size:opx;}
+
+.a a{width:0.989rem;height:0.259rem;border:0.009rem solid #fdc9c6;color:#fb4e44;font-size:0.189rem;text-align:center;line-height:0.259rem;
+		}
+.a{display: flex;justify-content: space-between;width:100%;padding:0 0.399rem 0.199rem}		
+.a a:last-child{width:0.349rem;height:0.259rem;margin-right:3.028rem;border-color:#b4ece6;color:#4cc2b6}
+
+h4 a img{width:6.696rem;height:2.218rem;margin:0 auto 0.199rem;}
+	
+.down{width:1.978rem;height:2.348rem;display:flex;flex-wrap:wrap;align-content:space-between}
+.down dl dt{width:1.978rem;white-space:nowrap;overflow: hidden;text-overflow: ellipsis;font-size:0.199rem;}
+.down dl dd{color:#fb4e44;font-size:0.219rem;}	
+
+.bigbox{display: flex;justify-content: space-between;padding:0 0.199rem;}

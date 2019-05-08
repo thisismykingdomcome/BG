@@ -1,0 +1,17 @@
+.title_Top{
+    width: 100%;
+    border:1px solid #b6b4b6;
+    background-color:#ffbbd0; 
+}
+.title_Top .child{
+    width:1200px;
+    height:80px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.title_Top img{
+    width:100%;
+}
+.title_Top .child a:hover img{
+    opacity: 0.8;
+}
