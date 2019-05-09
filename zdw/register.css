@@ -1,0 +1,146 @@
+.regist_top{/*登入页面的log图标*/
+    width:980px;
+    height:100px;
+    border-top:1px solid #b6b4b6;
+    margin:0 auto;
+}
+.regist_down{
+    width:980px;
+    height:481px;
+    margin:30px auto;
+}
+.regist_down h1{
+    float:left;
+}
+.regist_down .sideR{
+    float:right;
+    width:338px;
+    height:479px;
+    border:1px solid #b6b4b6;
+    font-size:14px;
+}
+.sideR .t1{
+    display:block;
+    width:112px;
+    height:39px;
+    border-bottom:1px solid #cccccc;
+    float:left;
+    font-size:14px;
+    text-decoration:none;
+    line-height:39px;
+    text-align:center;
+    position: relative;
+    top:-2px;
+}
+.user,.password,.verify{
+    width:80px;
+    line-height:28px;
+    margin-top:15px;
+    float:left;
+    text-align:right;
+}
+.user1,.pw,.verifyNum{
+    float:left; 
+    margin-top:15px;
+    position: relative;
+}
+.user1 input,.pw input{
+    width:220px;
+    padding:0 5px;
+    border:1px solid #cccccc;
+    height:28px;
+    
+}
+.verifyNum input{
+    width:62px;
+    height:28px;
+    float:left;
+}
+.verifyNum .vf{
+    font-size:20px;
+    color:green;
+    width:110px;
+    height:30px;
+    float:left;
+    line-height:30px;
+    text-align:center;
+}
+.sideR p{
+    display:none;
+    position: absolute;
+    top:32px;
+    left:0px;
+    font-size:10px;
+    color:#cccccc;
+}
+.ckbox{
+    margin: 25px 0 15px 80px;
+    float:left;
+}
+#sbmt{
+    float:left;
+    width:80px;
+    height:40px;
+    font-size:18px;
+    color:white;
+    background:red;
+    border:none;
+    border-radius: 5px;
+    margin-left: 128px;
+}
+#zh{
+    display:block;
+    float:left;
+    margin-top: 11px;
+    margin-left:10px;
+}
+.sideR .bottom{
+    width:330px;
+    float:left;
+    font-size:14px;
+    height:48px;
+    border-top:1px solid #ccc;
+    margin-top:20px;
+    padding-left:10px;
+}
+.sideR .bottom a{
+    display: block;
+    padding:3px 5px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    background:#f1f1f1;
+    float:right;
+    margin:10px 20px 0 0 ;
+}
+.sideR .down{
+    float:left;
+    width:302px;
+    margin:0 18px;
+}
+.down h1{
+    font-size:12px;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    background:#efefef;
+}
+.down .qq,.down .zfb,.down .wx{
+    display:block;
+    float:left;
+    width:99px;
+    height:30px;
+    font-size:14px;
+    border-bottom:1px solid #ccc;
+    line-height: 30px
+}
+.down .qq{
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+.down .wx{
+    border-right:1px solid #ccc;
+    border-left:1px solid #ccc;
+}
+
+
+

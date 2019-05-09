@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./font_w4pnv670vg/iconfont.css">
+    <script src="public.js"></script>
+</head>
+<body>
+    <div class="regist_top">
+        <a href="#">
+            <img src="./img/images/logo.jpg" alt="">
+        </a>
+    </div>
+    <div class="regist_down">
+        <h1>
+            <img src="./img/images/login_banner.jpg" alt="">
+        </h1>
+        <script>
+            function autoFocus(item){
+                var items = item.parentNode.children;
+                items[items.length-1].style.display = "block";
+            }
+            function autoBlurs(item){
+                var items = item.parentNode.children;
+               items[items.length-1].style.display = "none";
+            }
+        </script>
+        <form action="#">
+            <div class="sideR">
+                <a href="#" class="t1" index=0>账号登录</a>
+                <a href="#" class="t1" index=1>手机登录</a>
+                <a href="#" class="t1" index=2>卡登录</a>
+                <!---------------------------------------->
+                <div class="user">用户名:</div>
+                <div class="user1">
+                    <input type="text" autofocus autofocus onfocus=autoFocus(input[0]) onblur=autoBlurs(input[0])>
+                    <p>请输入账户或邮箱地址</p>
+                </div>
+                <!--------------------------------------------->
+                <div class="password">登录密码:</div>
+                <div class="pw">
+                        <input type="password" onfocus=autoFocus(input[1]) onblur=autoBlurs(input[1])>
+                        <p>请输入密码</p>
+                </div>
+                <!--------------------------------------------->          
+                <div class="verify">验证码:</div>
+                <div class="verifyNum">
+                    <input type="text" onfocus=autoFocus(input[2]) onblur=autoBlurs(input[2])>
+                    <div class="vf">
+                        123456
+                    </div>
+                    <a onclick=fn()>换一张</a>
+                    <p>请输入验证码</p>
+                </div>
+                <div class="ckbox">
+                    <input type="checkbox" class="ck1" checked="checked"> 记住用户名
+                    <input type="checkbox" class="ck1"> 自动登录
+                </div>
+                
+                <input type="submit" id="sbmt" value="登录" ><a href="#" id="zh">找回密码</a>
+                <div class="bottom">
+                    <span style="line-height:41px">还不是邦购网用户？马上加入吧...</span>
+                    <a href="#" >免费注册>></a>
+                </div>
+                <div class="down">
+                    <h1>或者使用合作网站登录</h1><p></p>
+                    <a href="#" class="qq iconfont icon-qq" style="text-indent:30px"><span style="margin-left:10px">QQ</span></a>
+                    <a href="#" class="zfb iconfont icon-qq" style="text-indent:18px"><span style="margin-left:10px">支付宝</span></a>
+                    <a href="#" class="wx iconfont icon-qq" style="text-indent:22px"><span style="margin-left:10px">微信</span></a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        var t1 = document.getElementsByClassName("t1");
+        var vf= document.getElementsByClassName("vf");
+        var input = document.getElementsByTagName("input");
+        var user = document.getElementsByClassName("user");
+        var user1 = document.getElementsByClassName("user1");
+        var password = document.getElementsByClassName("password");
+        t1[1].style.borderRight = "1px solid #ccc";
+        t1[1].style.borderLeft = "1px solid #ccc"; 
+        function fn1(){
+            for(var j=0,leng=t1.length;j<leng;j++){
+                t1[j].style.borderBottom = "1px solid #ccc";
+                t1[j].style.borderTop = "none";
+                t1[j].style.height = "39px";
+            }
+            t1[0].style.borderBottom = "none";
+            t1[0].style.borderTop = "2px solid red";
+            t1[0].style.height ="38px";
+        }
+        fn1(); 
+        for(var i=0,len=t1.length;i<len;i++){
+            t1[i].onclick = function(){
+                for(var j=0,leng=t1.length;j<leng;j++){
+                    t1[j].style.borderBottom = "1px solid #ccc";
+                    t1[j].style.borderTop = "none";
+                    t1[j].style.height = "39px";
+                }    
+                this.style.borderBottom = "none";
+                this.style.borderTop = "2px solid red";
+                this.style.height ="38px";
+                var index = this.getAttribute("index")    
+                var xhr = window.XMLHttpRequest ? new XMLHttpRequest : 
+                new ActiveXObject('Microsoft.XMLHTTp');
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState == 4 && xhr.status == 200){
+                        var response = JSON.parse(xhr.responseText);
+                        user[0].innerText = response.one;
+                        password[0].innerText = response.two;
+                        user1[0].children[1].innerText = response.p;
+                    }
+                }
+                xhr.open("get","data.php?a="+index,true);
+                xhr.send(null);
+                user1[0].children[0].focus();
+            }
+        }
+        function fn(){
+            vf[0].innerText = captcha(4);
+        }   
+    </script>
+</body>
+</html>
