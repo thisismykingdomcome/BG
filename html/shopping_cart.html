@@ -1,21 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/shopping_cart.css">
-    <script src="../js/jquery-3.3.1.js"></script>
-    <title>购物袋</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/shopping_cart.css">
+  <script src="../js/jquery-3.3.1.js"></script>
+  <title>购物袋</title>
 </head>
 <body>
-<div class="wrap container-fluid">
-    <div>头部</div>
-    <div class="main container">
-        dddd
+<div class="wrap">
+  <div class="nav">头部</div>
+  <!-- 购物车头部-->
+  <div class="mbshop_top">
+    <div class="mbshop_top_head">
+      <span class="mbshop_top_orderflowstep" title="订单流程——加入购物袋->填写订单信息->成功提交订单"></span>
     </div>
-    <div>页尾</div>
+  </div>
+  <!-- 购物车主体 -->
+  <div class="mbshop_main_title">
+    <h1>购物袋</h1>
+  </div>
+  <div class="mbshop_main">
+    <div class="mbshop_cartTop">
+      <ul>
+        <li class="mbshop_cartTop_01">
+          <label class="mbshop_cartTop_check">
+            <input type="checkbox" name="checkAll" checked="true">
+            <i>全选</i>
+          </label>
+        </li>
+        <li class="mbshop_cartTop_02">商品信息</li>
+        <li class="mbshop_cartTop_03">颜色尺码</li>
+        <li class="mbshop_cartTop_04">单价(元)</li>
+        <li class="mbshop_cartTop_05">数量</li>
+        <li class="mbshop_cartTop_06">小计</li>
+        <li class="mbshop_cartTop_07">操作</li>
+      </ul>
+    </div>
+    <div class="mbshop_cart_wrap">
+      <div class="mbshop_cartTitle">
+        <label class="mbshop_cartTop_check">
+          <input type="checkbox" name="checkAll" checked="true">
+          <i>邦购</i>
+        </label>
+        <span>满99包邮</span>
+      </div>
+      <div class="mbshop_cartGoods">
+        <ul>
+          <li class="mbshop_cartGoods_01">
+            <label class="mbshop_cartGoods_label">
+              <input type="checkbox" name="" id="">
+            </label>
+          </li>
+          <li class="mbshop_cartGoods_02">
+            <dl>
+              <dt>
+                <a href="#">
+                <img src="../img/shopping_cart/shopping_cart_706211_80_00.jpg" alt="">
+                </a>
+              </dt>
+              <dd>
+                <a href="#" title="男MTEE迪士尼漫威漫画table印花圆领恤">
+                <p>男MTEE迪士尼漫威漫画table印花圆领恤</p>
+                </a>
+                <i>商品编号：706211</i>
+                <div class="mbshop_cartGoods_02_p">
+                  <p>不可用红包</p>
+                </div>
+              </dd>
+            </dl>
+          </li>
+          <li class="mbshop_cartGoods_03">
+            <p>颜色：罂粟金</p>
+            <p>尺码：(L:175/96A)</p>
+          </li>
+          <li class="mbshop_cartGoods_04">
+            <p>￥99</p>
+            <b>￥45.9</b>
+            <select name="" id="" class="btn btn-default">
+              <option value="">修改优惠</option>
+              <option value="">优惠1</option>
+              <option value="">优惠2</option>
+              <option value="">优惠3</option>
+            </select>
+          </li>
+          <li class="mbshop_cartGoods_05">5</li>
+          <li class="mbshop_cartGoods_06">6</li>
+          <li class="mbshop_cartGoods_07">7</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="foot">页尾</div>
 </div>
 </body>
 </html>
