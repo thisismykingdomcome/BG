@@ -1,0 +1,30 @@
+[
+    {
+        "name": "shangyi",
+        "bigPic": {
+            "src": "../images/A62549_00.jpg"
+        },
+        "brand" : "花花公子",
+        "details" : "春秋季男士运动套装连帽卫衣男韩版",
+        "price" : "￥199",
+        "littlePic" : {
+            "src" : "../images/A62549_73_06.jpg",
+            "src" : "../images/A62549_32_05.jpg",
+            "src" : "../images/A62549_99_07.jpg"
+        }
+    },
+    {
+        "name": "xiezi",
+        "bigPic": {
+            "src": "../images/A62549_00.jpg"
+        },
+        "brand" : "花花公子",
+        "details" : "春秋季男士运动套装连帽卫衣男韩版",
+        "price" : "￥199",
+        "littlePic" : {
+            "src" : "../images/A62549_73_06.jpg",
+            "src" : "../images/A62549_32_05.jpg",
+            "src" : "../images/A62549_99_07.jpg"
+        }
+    }
+]

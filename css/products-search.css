@@ -1,0 +1,52 @@
+.wrap {
+    background: #fff;
+}
+.wrap .main {
+    width: 1200px;
+    margin: 0 auto;
+}
+.wrap dl {
+    width: 230px;
+    height: 422px;
+}
+.wrap dl dt {
+    height: 316px;
+}
+.wrap dl dt a {
+    display: block;
+}
+.wrap dl dd p {
+    height: 21px;
+    line-height: 21px;
+    font-size: 12px;
+}
+.wrap dl dd p a {
+    color: #000;
+}
+.wrap dl span {
+    float: right;
+    width: 40px;
+    height: 18px;
+    background: #fdedec;
+    line-height: 18px;
+    text-align: center;
+    border: 1px solid #f8584f;
+    color: #f8584f;
+}
+.wrap dl dt img {
+    width: 100%;
+    display: block;
+}
+.wrap dl dd img:hover {
+    border: 1px solid #f8584f;
+    cursor: pointer;
+}
+
+.wrap dl dd img {
+    box-sizing: border-box;
+    width: 31px;
+}
+.wrap dl p strong {
+    margin-right: 14px;
+    font-weight: bold;
+}

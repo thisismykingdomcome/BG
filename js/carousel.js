@@ -1,7 +1,28 @@
 //form ajax
-var submit = $("input[type='submit']");
-var form = $("")
-
+// $("#theform").submit(function(event){
+//     event.preventDefault();
+//     alert();
+//     var strArray = $(this).serialize();
+//     // console.log(strArray);
+//     $.get("../php/form.php",strArray,function(result){
+//         window.open("../html/products-search.html?id="+result);
+//         return false;
+//     });
+// });
+$("form").submit(function(event){
+    event.preventDefault();
+    var strArray = $(this).serialize();
+    $.get("../php/form.php",strArray,function(result){
+        var productsName = JSON.parse(result)[0].name;
+        window.open("../html/products-search.html?name="+productsName);
+        return false;
+    });
+});
+// $("form").submit(function(event){
+//     event.preventDefault();
+//     var str = $(this).serialize();
+//     location.href = "../html/products-search.html?"+str;
+// });
 
 //carouse.js
 var index = 0;

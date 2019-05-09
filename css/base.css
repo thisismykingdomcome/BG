@@ -1,0 +1,32 @@
+html,body,div,p,h1,h2,h3,h4,h5,h6,span,input,form,i,b,strong,em,a,ul,li,ol,dl,dd,dt,img{
+    padding: 0;
+    margin: 0;
+}
+img {
+    border: none;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+ul li,ol li {
+    list-style: none;
+}
+input {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+i,b,em,strong {
+    font-style: normal;
+    font-weight: normal;
+}
+
