@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/goodsdetails.css">
+    <script src="../js/jquery-1.12.4.js"></script>
+</head>
+<style>
+    .selected{
+        border:2px solid red;
+    }
+</style>
+<body>
+    <!-- 顶部搜索 -->
+    <div></div>
+    <!--导航  -->
+    <div></div>
+    <!-- 子碎片导航 -->
+    <div class="goods_breadNav">
+        <div class="goods_breadNavLink">
+            <a href="">所有商品</a>">"
+            <a href="">男装</a>">"
+            <a href="">T恤</a>">"
+            <a href="">短袖T恤</a>
+        </div>
+    </div>
+    <!-- 商品信息 -->
+    <div class="content">
+       <div class="goods_message">
+            <!-- 商品左侧图片信息 -->
+            <div class="goods_messagePicture">
+                <div class="goods_messageImage">
+                    <!-- 大图 -->
+                    <div class="goods_messageBig">
+                        <img src="../img/706211_00.jpg" style="width:480px; height:480px">
+                    </div>
+                    <!-- 小图 -->
+                    <div class="goods_messageSmall">
+                        <ul>
+                            <li><img src="../img/706211_00.jpg" style="width:78px; height:78px; border:1px solid #ccc; "></li>
+                            <li><img src="../img/706211_00.jpg" style="width:78px; height:78px; border:1px solid #ccc; "></li>
+                            <li><img src="../img/706211_00.jpg" style="width:78px; height:78px; border:1px solid #ccc; "></li>
+                            <li><img src="../img/706211_00.jpg" style="width:78px; height:78px; border:1px solid #ccc; "></li>
+                            <li><img src="../img/706211_00.jpg" style="width:78px; height:78px; border:1px solid #ccc; "></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品右侧详细信息 -->
+            <div class="goods_message_word">
+                <!-- 右侧头部 -->
+                <div class="goods_messageWordTitle">
+                    <a href="" target="_blank">METERSBONWE</a>
+                    <span id="goods_name">男MTEE迪士尼漫威漫画table印花圆领恤</span>
+                </div>
+                <!-- 价格 -->
+                <div class="goods_message_price">
+                    <ul>
+                        <li>
+                            <b>售价:</b>
+                            <strong id="goods_price">￥45.9</strong>&nbsp;
+                            <b>吊牌价:</b>
+                            <em>￥99</em>
+                            <span>4.6折</span>    
+                        </li>
+                        <li>
+                            <div style="float:left; ">本品不参加vip，svip折扣</div>
+                            <div class="member_rules"><i>会员规则</i>
+                                <div class="rules_message">
+                                    在有效期1年内：<br>
+                                    累计购物满1000元则升级为VIP；未满1000元则降为普通会员。<br>
+                                    在有效期1年内：<br>
+                                    累计购物满2000元则升级为SVIP；如累计购物1000~1999元，则降为VIP；如累计购物未满1000元则降为普通会员。
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 销量 积分 -->
+                <div class="goods_detailInfo">
+                    <!-- 销量 -->
+                    <div class="goods_sale first">
+                        销量：<span id="goods_sale">1</span>
+                    </div>
+                    <!-- 评价 -->
+                    <div class="goods_user">
+                        累计评价：<span id="goods_user">3</span>
+                    </div>
+                    <!-- 积分 -->
+                    <div class="goods_integral">
+                        积分：<span id="goods_integral">2</span>
+                    </div>
+                </div>
+                <!-- 颜色 -->
+                <div class="goods_color">
+                    <dl>
+                        <!-- 设置锚点 -->
+                        <dt>颜色:<span id="selectedColor">请选择颜色</span></dt>
+                        <dd>
+                            <img src="../img/706211_00.jpg" style="width:50px; height:50px;" >
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 尺码 -->
+                <div class="goods_size">
+                    <dl>
+                        <!-- 设置锚点 -->
+                        <dt>尺码：<span id="selectedSize" >请选择尺码</span><a class="assistant" href="#assistant">尺码选择助手</a></dt>
+                        <dd>
+                            <div class="size_170">M:170/92A</div>
+                            <div class="size_175">M:175/96A</div>
+                            <div class="size_180">M:180/100A</div>
+                        </dd>
+                    </dl>    
+                </div>
+                <!-- 购买数量 -->
+                <div class="goods_num">
+                    <dl>
+                        <dt>购买数量:</dt>
+                        <dd>
+                            <!-- 减 -->
+                            <button id="minus">-</button>
+                            <input id="num" type="text" value="1">
+                            <button id="add">+</button>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- 加入购物车 --> 
+            <button id="addCar">加入购物袋</button>
+       </div> 
+    </div>
+    <script>
+        
+    </script>
+    
+    
+</body>
+</html>
