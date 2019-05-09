@@ -2,10 +2,254 @@ html,body,div,a,ul,li,ol,dl,dd,dt,form,input,img,span,p,h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
 }
+a {
+    text-decoration: none;
+}
+input {
+    border: none;
+    outline: none;
+}
 #wrap {
     width: 1263px;
+    background: #f0f0f0;
 }
-#wrap .nav {
-    height: 123px;
+.main {
+    width: 1200px;
+    margin: 0 auto;
+}
+#wrap  .nav {
+    height: 121px;
     background: #fff;
+}
+#wrap .nav .nav-search {
+    height: 50px;
+    margin-top: 12px;
+}
+.nav-search a.logo {
+    float: left;
+    height: 50px;
+}
+.nav-center {
+    float: left;
+    margin-left: 55px;
+}
+.nav-center form {
+    width: 380px;
+    height: 34px;
+    margin-top: 12px;
+    float: left;
+}
+.nav-center [type="text"]{
+    float: left;
+    width: 293px;
+    height: 32px;
+    padding-left: 5px;
+    line-height: 32px;
+    font-size: 12px;
+    color: #666;
+    background: #fff;
+    border: 1px solid #d51819;
+}
+.nav-center [type="submit"]{
+    float: left;
+    width: 80px;
+    height: 34px;
+    background: #d51819 url(../images/search.png) no-repeat;
+    background-position: 15px 10px;
+    padding-left: 39px;
+    font-size:12px;
+    color: #fff;
+    line-height: 34px;
+}
+ul li,
+ol li {
+    list-style: none;
+}
+.nav-search ul {
+    float: left;
+    margin-top: 23px;
+}
+.nav-search ul li {
+    float: left;
+}
+.nav-search ul li a {
+    display: block;
+    padding: 0 11px;
+    font-size: 12px;
+    height: 11px;
+    line-height: 11px;
+    border-right: 1px solid #dce2eb;
+}
+.nav-search ul li:last-child a {
+    border: none;
+}
+.nav-shoppage {
+    float: right;
+    width: 73px;
+    height: 26px;
+    padding: 24px 0 0 39px;
+    font-size: 12px;
+    color: #000;
+    background: url(../images/page.png) no-repeat;
+    background-position: 0 16px;
+}
+i {
+    font-style: normal;
+}
+.nav-shoppage i {
+    color: #f00;
+    margin: 0 4px;
+}
+.nav-list ul {
+    float: left;
+    margin-top: 37px;
+    font-size: 12px;
+}
+.nav-list ul li {
+    float: left;
+    margin: 0 18px;
+    position: relative;
+}
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+.nav-list ul > li a {
+    color: #000;
+}
+.nav-list ul > li .display-none {
+    background: #fff;
+    position: absolute;
+    left: -18px;
+    width: 330px;
+    display: none;
+}
+.nav-list ul > li:hover .display-none {
+    display: block;
+}
+.nav-list ul > li dl {
+    float: left;
+    margin-top: 30px;
+    border-right: 1px solid #f0f0f0;
+    width: 109px;
+    text-align: center;
+    line-height: 42px;
+}
+.nav-list ul > li .display-none dl:last-child {
+    border: none;
+}
+.nav-list ul > li dt {
+    height: 42px;
+    font-size: 20px;
+    color: #d22223;
+    margin-bottom: 18px;
+}
+.nav-list ul > li dd {
+    height: 42px;
+    color: #000;
+}
+.nav-list ol {
+    float: left;
+    margin-left: 64px;
+}
+.nav-list ol li {
+    float: left;
+    margin: 19px 41px 0;
+    position: relative;
+    height: 42px;
+    line-height: 42px;
+}
+.nav-list ol li a {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+.nav-list ol li span {
+    display: block;
+    color: #fff;
+    position: absolute;
+    background: #ff0c00;
+    top: -3px;
+    font-size: 8px;
+    line-height: 13px;
+    border-radius: 4px;
+}
+.nav-list a[alt="phoneshop"]{
+    float: right;
+    margin-top: 19px;
+}
+.carousel {
+    height: 750px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+.carousel ul {
+    position: relative;
+    height: 600px;
+}
+.carousel ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.carousel ul li a {
+    display: block;
+}
+.carousel ul img {
+    /* width: 100%; */
+    display: block;
+}
+.carousel ol {
+    height: 150px;
+    background: #fff;
+    margin: 20px 0 0 32px;
+}
+.carousel ol li {
+    position: relative;
+    float: left;
+    padding: 0 9px 0 10px;
+    border-right: 1px solid #f0f0f0;
+}
+.carousel ol .shadow {
+    left: 10px;
+    top: 0;
+    width: 220px;
+    height: 110px;
+    position: absolute;
+    z-index: 10;
+    background: rgba(0,0,0,0.4);
+}
+.carousel ol .shadow-none {
+    background: none;
+}
+.carousel ol li .red-border {
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background: #d22223;
+    bottom: -17px;
+    left: 69px;
+    display: none;
+}
+.carousel ol li .border-block {
+    display: block;
+}
+.hot-brand a[alt="title"] {
+    display: block;
+    height: 92px;
+    margin: 50px 0 0 40px;
+    padding-left: 15px;
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+    background: url(../images/title-bgi.png) no-repeat;
+    background-position: 0 8px;
+}
+.hot-brand a[alt="title"]:hover {
+    opacity: 0.5;
 }
