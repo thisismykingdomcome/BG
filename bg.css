@@ -1,0 +1,323 @@
+.container{
+    width:1200px;
+    margin:0 auto;
+}
+.hot{
+    width:1200px;
+    /* height: 592px; */
+}
+.hot h3{
+    height:92px;
+    width:100%;
+     opacity: 1;
+}
+h3 span{
+    color:red;
+    
+}
+h3 a{
+    text-decoration:none;
+    font-size:24px;
+    line-height:92px;
+    color:#000;
+    padding-left:30px;
+   
+}
+.hot ul{
+    display:flex;
+    flex-wrap:wrap;
+}
+.hot ul li{
+    width:23%;
+    padding:1%;
+    opacity: 1;
+    justify-content:space-between;
+}
+h3 :hover{
+    opacity:0.8;
+}
+ul li :hover{
+    opacity:0.8;
+}
+.today{
+   width:100%;
+   height:757px;
+}
+.box{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+}
+.today h3{
+    height:92px;
+    width:100%;
+     opacity: 1;
+}
+h3 span{
+    color:red;
+    
+}
+h3 a{
+    text-decoration:none;
+    font-size:24px;
+    line-height:92px;
+    color:#000;
+    padding-left:30px;
+   
+}
+h3 :hover{
+    opacity:0.8;
+}
+
+.goods{
+    background: #fff;
+    width: 230px;
+    height: 325px;
+}
+
+.goods-img{
+    width: 100%;
+    height: 230px;
+    position: relative;
+}
+.good-img .pic{
+    width:100%;
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 0px;
+    top: 0px;
+    display: block;
+    opacity: 1;
+}
+.goods-img:hover{
+    opacity:0.8;
+}
+.goods-img .pic1{
+    position: absolute;
+    right: 12px;
+    top: 6px;
+    width:60px;
+    height:60px;
+}
+.goods-name{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+}
+.good-discount{
+    float: right;
+    width: 40px;
+    height: 18px;
+    line-height: 18px;
+    border: 1px solid #f8584f;
+    text-align: center;
+    color: #f8584f;
+    background: #fdedec;
+}
+.brand-name{
+    display: block;
+    font-size: 14px;
+    color: #919191;
+}
+.good-name{
+    width: 200px;
+    height: 20px;
+    display: block;
+    overflow: hidden;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #222;
+}
+.price{
+    margin-top: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.price b{
+    font-size: 14px;
+    color: #f8584f;
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: 800;
+}
+.price i{
+    font-style: normal;
+    font-size: 12px;
+    color: #919191;
+    text-decoration: line-through;
+}
+.goods{
+    background: #fff;
+    width: 230px;
+    height: 325px;
+}
+.goods-img1{
+    width: 100%;
+    height: 230px;
+    position: relative;
+}
+.good-img1 .pic{
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 0px;
+    top: 0px;
+    display: block;
+    opacity: 1;
+}
+.goods-img1 .pic:hover{
+    opacity:0.8
+}
+.goods .goods-name{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+}
+.goods .goods-name .brand-name{
+    display: block;
+    font-size: 14px;
+    color: #919191;
+}
+.goods .goods-name .good-name{
+    width: 200px;
+    height: 20px;
+    display: block;
+    overflow: hidden;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #222;
+}
+.goods .price{
+    margin-top: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.goods .price b{
+    font-size: 14px;
+    color: #f8584f;
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: 800;
+}
+.goods{
+    flex:1;
+    justify-content:space-between;
+}
+.yxshare{
+    width: 1200px;
+    height: 240px;
+    margin: 53px auto 0;
+    position: relative;
+    float: none;
+    clear: both;
+}
+.yxshare-left{
+    float:left;
+}
+.yxshare-left li{
+    float:left;
+    width:33%;
+    
+}
+.yxshare-right{
+    float:left;
+    width:359px;
+    
+}
+
+.yxshare-right .contact-bottom ul{
+    
+    text-align:center;
+    /* width:30%; */
+    display:flex;
+    flex-wrap:wrap;
+}
+.contact-bottom ul li{
+    
+    flex:1;
+    justify-content:space-between;
+
+}
+.yxshare-right .contact-bottom ul li{
+    float:left;
+}
+.contact-top{
+    width: 359px;
+    height: 149px;
+    border-bottom: 1px solid #dcdcdc;
+    text-align: center;
+}
+.contact-top a img{
+    display: block;
+    opacity: 1;
+}
+.contact-top a img :hover{
+    display: block;
+    opacity: 0.8;
+}
+.footershop{
+    background: url(//s.banggo.com/pub7/images/mbshop/newImg/mbshop_bottom_guide.png?t=20160603) repeat-x;
+    width: 100%!important;
+    margin-top: 40px!important;
+    background-color: #fff!important;
+}
+.footershop-guide{
+    overflow: hidden;
+    width: 1200px;
+    float: none;
+    margin: 0 auto;
+    padding-top: 11px;
+}
+.footershop-guide dl{
+    width: 200px;
+    height: auto;
+    float: left;
+    display: block;
+}
+.footershop-guide dl dt {
+    width: auto;
+    clear: right;
+    font: 700 14px "微软雅黑","黑体","微软雅黑","宋体",verdana;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    color: #231815;
+}
+.footershop-guide dl dd{
+    width: 200px;
+    padding-top: 13px;
+   
+}
+.footershop-guide dl dd a{
+    font: 12px "微软雅黑","黑体","微软雅黑","宋体",verdana;
+    color: #231815;
+}
+.footershop-right{
+    overflow: hidden;
+    float: none;
+    margin: 20px auto 0;
+    width: 100%;
+    padding: 20px 0 15px;
+    border-top: 1px solid #999;
+}
+.footershop-right p{
+    margin: 0 auto;
+    width: 1200px;
+    text-align: center;
+    float: none;
+    display: block;
+    font: 700 14px "微软雅黑","黑体","微软雅黑","宋体",verdana,verdana;
+    color: #787878;
+}
+.footershop-right span{
+    padding-top: 15px;
+    width: 400px;
+    overflow: hidden;
+}
+.footershop-right span a {
+    float: left;
+    display: block;
+    margin-left: 10px;
+}
