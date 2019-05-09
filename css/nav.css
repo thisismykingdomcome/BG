@@ -4,6 +4,7 @@ html,body,div,a,ul,li,ol,dl,dd,dt,form,input,img,span,p,h1,h2,h3,h4,h5,h6{
 }
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 input {
     border: none;
@@ -59,6 +60,7 @@ input {
     font-size:12px;
     color: #fff;
     line-height: 34px;
+    cursor: pointer;
 }
 ul li,
 ol li {
@@ -101,11 +103,13 @@ i {
 }
 .nav-list ul {
     float: left;
-    margin-top: 37px;
+    margin-top: 31px;
     font-size: 12px;
 }
 .nav-list ul li {
     float: left;
+    height: 40px;
+    line-height: 40px;
     margin: 0 18px;
     position: relative;
 }
@@ -123,12 +127,15 @@ i {
 .nav-list ul > li .display-none {
     background: #fff;
     position: absolute;
+    top: 40px;
     left: -18px;
     width: 330px;
     display: none;
+    border-top: 1px solid #ccc;
 }
 .nav-list ul > li:hover .display-none {
     display: block;
+    z-index: 100;
 }
 .nav-list ul > li dl {
     float: left;
