@@ -1,3 +1,9 @@
+//form ajax
+var submit = $("input[type='submit']");
+var form = $("")
+
+
+//carouse.js
 var index = 0;
 var timer = setInterval(autoPlay,2000);
 function autoPlay(){

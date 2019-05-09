@@ -10,7 +10,6 @@ input {
     outline: none;
 }
 #wrap {
-    width: 1263px;
     background: #f0f0f0;
 }
 .main {
@@ -241,7 +240,7 @@ i {
 }
 .hot-brand a[alt="title"] {
     display: block;
-    height: 92px;
+    height: 42px;
     margin: 50px 0 0 40px;
     padding-left: 15px;
     font-size: 24px;
@@ -252,4 +251,14 @@ i {
 }
 .hot-brand a[alt="title"]:hover {
     opacity: 0.5;
+}
+.hot-brand a[alt="hot-brand"] {
+    float: left;
+    margin-right: 15px;
+}
+.hot-brand a[alt="hot-brand"]:last-of-type {
+    margin-right: 0;
+}
+.hot-brand a[alt="hot-brand"]:hover {
+    opacity: 0.7;
 }
