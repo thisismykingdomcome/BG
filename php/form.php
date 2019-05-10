@@ -1,4 +1,5 @@
 <?php
+header("Content-type:text/html;charset=utf8");
 mysql_connect("localhost","root","root");
 mysql_query("use bg");
 $search = $_GET["input-text"];
@@ -14,7 +15,7 @@ $sql = "select * from search where name like '$search'";
 $result = mysql_query($sql);
 $rows = [];
 while($row = mysql_fetch_assoc($result)){
-    $rows[] = $row;
+        $rows[] = $row;
 }
 echo json_encode($rows);
 ?>

@@ -13,8 +13,12 @@ $("form").submit(function(event){
     event.preventDefault();
     var strArray = $(this).serialize();
     $.get("../php/form.php",strArray,function(result){
-        var productsName = JSON.parse(result)[0].name;
-        window.open("../html/products-search.html?name="+productsName);
+        if(result != "[]"){
+            var productsName = JSON.parse(result)[0].name;
+            window.open("../html/products-search.html?name="+productsName);
+        }else{
+            alert("抱歉，没有此类商品");
+        }
         return false;
     });
 });

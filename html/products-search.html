@@ -13,25 +13,125 @@
 <body>
     <div class="wrap">
         <div class="main">
-            <dl>
+            <dl class="firstProduct">
                 <dt>
-                    <a href=""><img src="../images/A62549_00.jpg" alt=""></a>
+                    <a href=""><img src="../images/A62549_00.jpg" alt="bigPic" ></a>
                 </dt>
                 <dd>
-                    <p><a>花花公子</a><span>3.3折</span></p>
-                    <p><a>春秋季男士运动套装连帽卫衣男韩版</a></p>
-                    <p><strong>￥199</strong><del>￥599</del></p>
-                    <img src="../images/A62549_73_06.jpg" alt="">
-                    <img src="../images/A62549_32_05.jpg" alt="">
-                    <img src="../images/A62549_99_07.jpg" alt="">
+                    <p><a title="brand">花花公子</a><span class="discount"></span></p>
+                    <p><a title="details">春秋季男士运动套装连帽卫衣男韩版</a></p>
+                    <p><strong class="price">￥199</strong><del class="priceDelete"></del></p>
+                    <!-- <img src="../images/A62549_73_06.jpg" alt="first">
+                    <img src="../images/A62549_32_05.jpg" alt="second">
+                    <img src="../images/A62549_99_07.jpg" alt="third"> -->
+                </dd>
+            </dl>
+            <dl class="secondProduct">
+                <dt>
+                    <a href=""><img src="../images/A62549_00.jpg" alt="bigPic"></a>
+                </dt>
+                <dd>
+                    <p><a title="brand">花花公子</a><span class="discount"></span></p>
+                    <p><a title="details">春秋季男士运动套装连帽卫衣男韩版</a></p>
+                    <p><strong class="price">￥199</strong><del class="priceDelete"></del></p>
+                    <!-- <img src="../images/A62549_73_06.jpg" alt="first">
+                    <img src="../images/A62549_32_05.jpg" alt="second"> -->
+                </dd>
+            </dl>
+            <dl class="thirdProduct">
+                <dt>
+                    <a href=""><img src="../images/A62549_00.jpg" alt="bigPic"></a>
+                </dt>
+                <dd>
+                    <p><a title="brand">花花公子</a><span class="discount"></span></p>
+                    <p><a title="details">春秋季男士运动套装连帽卫衣男韩版</a></p>
+                    <p><strong class="price">￥199</strong><del class="priceDelete"></del></p>
+                    <img src="../images/A62549_73_06.jpg" alt="first">
+                    <img src="../images/A62549_32_05.jpg" alt="second">
+                    <img src="../images/A62549_99_07.jpg" alt="third">
                 </dd>
             </dl>
         </div>
     </div>
 </body>
+<script src="../js/details.json"></script>
+<script src="../js/jquery.min.js"></script>
 <script>
     var search = window.location.href.toString();
     var name = search.split("?")[1].split("=")[1];
-    
+    $.getJSON("../js/details.json",function(data){
+        data.forEach(function(value,key){
+            if(value["name"] == name){
+                $(".firstProduct").find($("img[alt='bigPic']")).attr("src",value.firstProduct.bigPic);
+                $(".firstProduct").find($("a[title='brand']")).text(value.firstProduct.brand);
+                $(".firstProduct").find($(".discount")).text(value.firstProduct.discount);
+                $(".firstProduct").find($("a[title='details']")).text(value.firstProduct.details);
+                $(".firstProduct").find($(".price")).text(value.firstProduct.price);
+                $(".firstProduct").find($(".priceDelete")).text(value.firstProduct.priceDelete);
+                for(var i = 0; i < Object.keys(value.firstProduct.littlePic).length; i++){
+                   var img =  document.createElement("img");
+                   img["src"] = value.firstProduct.littlePic[i];
+                   $(".firstProduct dd").append(img);
+                }
+
+                // console.log(value.firstProduct.littlePic);
+                // console.log(Object.keys(value.firstProduct.littlePic).length);
+                // console.log(value.firstProduct.littlePic.length);
+
+                // $(".firstProduct").find($("img[alt='first']")).attr("src",value.firstProduct.first);
+                // $(".firstProduct").find($("img[alt='second']")).attr("src",value.firstProduct.second);
+                // $(".firstProduct").find($("img[alt='third']")).attr("src",value.firstProduct.third);
+                
+                $(".secondProduct").find($("img[alt='bigPic']")).attr("src",value.secondProduct.bigPic);
+                $(".secondProduct").find($("a[title='brand']")).text(value.secondProduct.brand);
+                $(".secondProduct").find($(".discount")).text(value.secondProduct.discount);
+                $(".secondProduct").find($("a[title='details']")).text(value.secondProduct.details);
+                $(".secondProduct").find($(".price")).text(value.secondProduct.price);
+                $(".secondProduct").find($(".priceDelete")).text(value.secondProduct.priceDelete);
+                for(var i = 0; i < Object.keys(value.secondProduct.littlePic).length; i++){
+                   var img =  document.createElement("img");
+                   img["src"] = value.secondProduct.littlePic[i];
+                   $(".secondProduct dd").append(img);
+                }
+                // $(".secondProduct").find($("img[alt='first']")).attr("src",value.secondProduct.first);
+                // $(".secondProduct").find($("img[alt='second']")).attr("src",value.secondProduct.second);
+
+                $(".thirdProduct").find($("img[alt='bigPic']")).attr("src",value.thirdProduct.bigPic);
+                $(".thirdProduct").find($("a[title='brand']")).text(value.thirdProduct.brand);
+                $(".thirdProduct").find($(".discount")).text(value.thirdProduct.discount);
+                $(".thirdProduct").find($("a[title='details']")).text(value.thirdProduct.details);
+                $(".thirdProduct").find($(".price")).text(value.thirdProduct.price);
+                $(".thirdProduct").find($(".priceDelete")).text(value.thirdProduct.priceDelete);
+                $(".thirdProduct").find($("img[alt='first']")).attr("src",value.thirdProduct.first);
+                $(".thirdProduct").find($("img[alt='second']")).attr("src",value.thirdProduct.second);
+                $(".thirdProduct").find($("img[alt='third']")).attr("src",value.thirdProduct.third);
+
+                
+
+
+               
+            }
+        })
+    });
+    // $("dl").on("mouseenter",function(){
+    //     var preBig =  $(this).find($("img[alt='bigPic']"));
+    //         // var preBig =  $(this).parent().parent().find($("img[alt='bigPic']"));
+    //         var preBigPic = preBig.attr("src");
+    //         preBig.attr("src",$(this).children("img").attr("src"));
+    //         preBig.css({"width":"230px"},{"height":"316px"});
+    //         $(this).on("mouseleave",function(){
+    //             preBig.attr("src",preBigPic);
+    //         });
+    // });
+    $("img").mouseenter(function(){
+            var preBig =  $(this).parent().parent().find($("img[alt='bigPic']"));
+            var preBigPic = preBig.attr("src");
+            preBig.attr("src",$(this).attr("src"));
+            preBig.css({"width":"230px"},{"height":"316px"});
+            $(this).mouseleave(function(){
+                preBig.attr("src",preBigPic);
+            });
+    });
+   
 </script>
 </html>

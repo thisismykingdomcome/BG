@@ -1,30 +1,79 @@
-[
-    {
-        "name": "shangyi",
-        "bigPic": {
-            "src": "../images/A62549_00.jpg"
+[{
+        "name": "weiyi",
+        "firstProduct": {
+            "bigPic": "../images/A62549_00.jpg",
+            "brand": "花花公子",
+            "discount": "3.3折",
+            "details": "春秋季男士运动套装连帽卫衣男韩版",
+            "price": "￥199",
+            "priceDelete": "￥599",
+            "littlePic" : {
+                "0": "../images/A62549_73_06.jpg",
+                "1": "../images/A62549_32_05.jpg",
+                "2": "../images/A62549_99_07.jpg"
+            }
         },
-        "brand" : "花花公子",
-        "details" : "春秋季男士运动套装连帽卫衣男韩版",
-        "price" : "￥199",
-        "littlePic" : {
-            "src" : "../images/A62549_73_06.jpg",
-            "src" : "../images/A62549_32_05.jpg",
-            "src" : "../images/A62549_99_07.jpg"
+        "secondProduct": {
+            "bigPic": "../images/A84266_00.jpg",
+            "brand": "OLRIK",
+            "discount": "3.6折",
+            "details": "男士卫衣运动服装春秋季潮流开衫",
+            "price": "￥143",
+            "priceDelete": "￥399",
+            "littlePic" : {
+                "0": "../images/A84266_29-5200573-OLRIK_01.jpg",
+                "1": "../images/A84266_73-5200573-OLRIK_02.jpg"
+            }
+        },
+        "thirdProduct": {
+            "bigPic": "../images/A83617_00.jpg",
+            "brand": "CHOKNESS",
+            "discount": "1.9折",
+            "details": "时尚潮流新款国潮风套头圆领长袖卫衣",
+            "price": "￥58",
+            "priceDelete": "￥298",
+            "first": "../images/A83617_01-5200479-CHOKNESS_06.jpg",
+            "second": "../images/A83617_64-5200479-CHOKNESS_08.jpg",
+            "third": "../images/A83617_29-5200479-CHOKNESS_07.jpg"
         }
     },
     {
         "name": "xiezi",
-        "bigPic": {
-            "src": "../images/A62549_00.jpg"
+        "firstProduct": {
+            "bigPic": "../images/201253_00.jpg",
+            "brand": "花花花花",
+            "discount": "3.6折",
+            "details": "春秋季男士运动套装连帽卫衣男韩版",
+            "price": "￥289",
+            "littlePic" : {
+                "0": "../images/201253_03_00.jpg",
+                "1": "../images/201253_33_00.jpg",
+                "2": "../images/201253_99_00.jpg",
+                "3": "../images/201253_99_00.jpg"
+            }
         },
-        "brand" : "花花公子",
-        "details" : "春秋季男士运动套装连帽卫衣男韩版",
-        "price" : "￥199",
-        "littlePic" : {
-            "src" : "../images/A62549_73_06.jpg",
-            "src" : "../images/A62549_32_05.jpg",
-            "src" : "../images/A62549_99_07.jpg"
+        "secondProduct": {
+            "bigPic": "../images/A82994_00.jpg",
+            "brand": "OLRIK",
+            "discount": "3.6折",
+            "details": "男士卫衣运动服装春秋季潮流开衫",
+            "price": "￥143",
+            "priceDelete": "￥399",
+            "first": "../images/A82994_01-5200558-AILISHA_01.jpg",
+            "second": "../images/A82994_09-5200558-AILISHA_02.jpg",
+            "third": "../images/A82994_27-5200558-AILISHA_03.jpg"
+        },
+        "thirdProduct": {
+            "bigPic": "../images/A83617_00.jpg",
+            "brand": "CHOKNESS",
+            "discount": "1.9折",
+            "details": "时尚潮流新款国潮风套头圆领长袖卫衣",
+            "price": "￥58",
+            "priceDelete": "￥298",
+            "first": "../images/A83617_01-5200479-CHOKNESS_06.jpg",
+            "second": "../images/A83617_64-5200479-CHOKNESS_08.jpg",
+            "third": "../images/A83617_29-5200479-CHOKNESS_07.jpg"
         }
+
     }
 ]

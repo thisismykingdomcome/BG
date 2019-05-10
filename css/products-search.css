@@ -8,6 +8,8 @@
 .wrap dl {
     width: 230px;
     height: 422px;
+    float: left;
+    margin-right: 10px;
 }
 .wrap dl dt {
     height: 316px;
@@ -36,6 +38,7 @@
 .wrap dl dt img {
     width: 100%;
     display: block;
+    height: 315px;
 }
 .wrap dl dd img:hover {
     border: 1px solid #f8584f;
@@ -45,6 +48,8 @@
 .wrap dl dd img {
     box-sizing: border-box;
     width: 31px;
+    height: 31px;
+    margin: 2px;
 }
 .wrap dl p strong {
     margin-right: 14px;
