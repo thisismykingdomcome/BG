@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/public.js"></script>
+</head>
+<body>
+    <div class="logo">
+        <a href="#">
+            <img src="../img/images/logo.jpg" alt="">
+        </a>
+    </div>
+    <div class="zhuce_top">
+        <a href="#">手机注册</a>
+    </div>
+    <div class="zhuce_box">
+    <form action="#">
+        <div class="zhuce_left">
+            <h1>第一步：填写手机账户信息(以下内容必填)</h1>
+            <div class="user">用户名:</div>
+                <div class="user1">
+                    <input id="yhm" type="text" name="asdf"  autofocus onfocus=autoFocus(yhm) onblur=autoBlurs(yhm,yhmReg)> 
+                    <span>提示：请输入4-20个字符，一个汉字为两个字符，推荐使用中文会员名字。一旦注册成功，会员名将不能修改.</span>
+                    <p></p>
+                </div>
+            <div class="user">手机号码:</div>
+                <div class="user1">
+                    <input id="sjh" type="text" name="asdf"   onfocus=autoFocus(sjh) onblur=autoBlurs(sjh,sjhReg)> 
+                    <span>请输入您的手机号.</span>
+                    <p></p>
+                </div>
+            <div class="verify">验证码:</div>
+            <div class="verifyNum">
+                <input id="yzm" type="text" onfocus=autoFocus(yzm) onblur=autoBlurs(yzm,)>
+                <div class="vf">
+                    123456
+                </div>
+                <p>请输入验证码</p>
+                <a onclick=fn()>换一张</a>
+            </div>
+            <button id="fsbtn">发送激活码</button>
+        </div>
+    </form>
+    <div class="zhuce_right">
+        <h1>邦购网欢迎您</h1>
+        <p>Lemon (《Unnatural》日剧主题曲) - 米津玄師 (よねづ けんし)Lemon (《Unnatural》日剧主题曲) - 米津玄師 (よねづ けんし)<br>
+词：米津玄師<br>
+曲：米津玄師<br>
+夢ならば<br>如果只是一场梦<br>
+どれほどよかったでしょう<br>那该有多好<br>
+未だにあなたのことを夢にみる<br>你依旧出现在我梦中<br>
+忘れた物を取りに帰るように<br>就像取回遗忘的东西一样<br>
+古びた思い出の埃を払う<br>把陈旧回忆上的灰尘拂去<br>
+戻らない幸せがあることを<br>有些幸福再也无法重来<br>
+最後にあなたが教えてくれた<br>这是最后你告诉我的<br>
+言えずに隠してた昏い過去も<br>藏在心里的黑暗过去<br>
+あなたがいなきゃ<br>没有了你<br>
+永遠に昏いまま<br>也会永远黑暗<br>
+きっともうこれ以上 <br>我明白<br>
+傷つくことなど <br>不会再有比这<br>
+ありはしないとわかっている<br>更让人受伤的事了<br>
+あの日の悲しみさえ<br> 连那一天的悲伤<br>
+あの日の苦しみさえ <br>连那一天的痛苦<br>
+そのすべてを愛してた <br>那一切我都深爱着<br>
+あなたとともに <br>连同你一起<br>
+胸に残り離れない<br> 留在我心间 挥之不去<br>
+苦いレモンの匂い <br>苦涩的柠檬香<br>
+雨が降り止むまでは帰れない <br>直到大雨停下为止都不会归去<br>
+今でもあなたはわたしの光<br> 时至今日你依旧是我的光<br>
+暗闇であなたの背をなぞった<br>
+その輪郭を鮮明に覚えている<br>
+受け止めきれないものと<br>
+出会うたび<br>
+溢れてやまないのは涙だけ<br>
+何をしていたの<br>
+何を見ていたの<br>
+わたしの知らない横顔で<br>
+どこかであなたが今<br>
+わたしと同じ様な<br>
+涙にくれ<br>
+淋しさの中にいるなら<br>
+わたしのことなどどうか<br>
+忘れてください<br>
+そんなことを心から願うほどに<br>
+今でもあなたはわたしの光<br>
+自分が思うより<br>
+恋をしていたあなたに<br>
+あれから思うように<br>
+息ができない<br>
+あんなに側にいたのに<br>
+まるで嘘みたい<br>
+とても忘れられない<br>
+それだけが確か<br>
+胸に残り離れない<br>
+苦いレモンの匂い<br>
+雨が降り止むまでは帰れない<br>
+切り分けた果実の片方の様に<br>
+今でもあなたはわたしの光<br>             
+                </p>
+    </div>
+    </div>
+    <script>
+        var vf = document.getElementsByClassName("vf");
+        var yhm = document.getElementById("yhm");
+        var sjh = document.getElementById("sjh");
+        var yzm = document.getElementById("yzm");
+        var p = document.getElement
+        var yhmReg = /^([\u4e00-\u9fa5]|[a-zA-Z])(\w|[\u4e00-\u9fa5])$/;
+        function fn(){/*给验证码盒子的文本内容添加随机验证码*/
+            vf[0].innerText = captcha(4);
+        }
+        fn();
+        function autoFocus(item){
+                var items = item.parentNode.children;
+                items[2].style.display = "none"
+            }
+        function autoBlurs(item,reg){
+            var items = item.parentNode.children;
+            items[2].style.display = "block";
+            if(yhm.value == ""){
+               return items[2].innerText = "内容不能为空";
+            }
+            if(reg){
+                reg.test(yhm.value);
+            }
+           
+            console.log(yhm.value);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,3 +1,16 @@
+function getCookieValue(name){/*获取某name对应的值*/
+	var str = document.cookie;
+	if(str == ""){
+		return "";
+	}        
+	var arr = str.split("; ");/*注意：是分号加空格,不是只有分号*/
+	for(var i = 0,len=arr.length;i < len;i ++){
+		if(arr[i].split("=")[0] == name){  
+			return arr[i].split("=")[1];
+		}
+	};
+	return false;/*不存在某name，则返回false*/
+}
 /////////////////////////*随机数*////////////////////////////////////////
 function ranNum(min,max){
 	var b=parseInt(Math.random()*(max-min+1)+min);

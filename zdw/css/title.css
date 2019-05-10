@@ -1,6 +1,6 @@
 .title_Top{
     width: 100%;
-    border:1px solid #b6b4b6;
+    border-top:1px solid #b6b4b6;
     background-color:#ffbbd0; 
 }
 .title_Top .child{
