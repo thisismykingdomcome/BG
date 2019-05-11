@@ -96,10 +96,22 @@ img{
 .goods_messageSmall ul li:hover{
     border: 1px solid red;
 }
-.productNum{
-    font-size: 12px;
+.goods_message_bottom {
+    font-size: 14px;
     color: #7a7a7a;
     margin-top: 20px;
+}
+.goods_message_bottom ul li{
+    float: left;
+}
+.goods_message_bottom ul li:nth-child(2){
+    margin-left: 100px;
+    cursor: pointer;
+}
+.goods_message_bottom ul li:nth-child(3) {
+    margin-left: 100px;
+    color: red;
+    cursor: pointer;
 }
 .goods_message_word{
     float: left;
@@ -174,11 +186,11 @@ img{
 }
 .goods_color{
     clear: both;
-    margin-top: 20px;
+    margin-top: 25px;
     overflow: hidden;
 }
 .goods_color dl dd{
-    margin-top: 10px;
+    margin-top: 15px;
     float: left;
     margin-right: 10px;
     border: 1px solid #ccc;
@@ -216,9 +228,8 @@ img{
 .goods_num{
     overflow: hidden;
     clear: both;
-    margin-top:15px; 
-    line-height: 150%;
-    margin-bottom: 15px;
+    margin-top:25px; 
+    margin-bottom: 20px;
 }
 .goods_num dl dt{
     float: left;
@@ -231,7 +242,7 @@ img{
     text-align: center;
 }
 #addCar{
-    padding:5px 50px;
+    padding:10px 80px;
     background-color:red;
     color: white;
     font-weight: bold;
@@ -246,6 +257,95 @@ img{
     border:1px solid red;
     width:150px;
     height:30px;
-    line-height:30px;
+    line-height:40px;
     text-align:center;
+}
+.goods_lookandremind {
+    font-size: 14px;
+    margin-top: 20px;
+}
+.goods_lookandremind .goods_remind span{
+    float: left;
+    line-height: 40px
+}
+.goods_lookandremind ul li{
+    list-style-type: disc;
+    float: left;
+    line-height: 40px;
+}
+.goods_lookandremind ul li:first-child{
+    margin-left: 15px;
+}
+.goods_lookandremind ul li:nth-child(2){
+    margin-left: 100px;
+}
+.goods_lookandremind ul li:nth-child(3) {
+    clear: both;
+    margin-left: 78px;
+}
+.goods_openpage{
+    width:700px;
+    left: 50%;
+    top: 50%;
+    margin-left: -350px;
+    position:fixed;
+    z-index: 999;
+    background: white;
+}
+.goods_openpage_top{
+    padding:10px 5px;
+    background: rgb(236, 234, 234);
+    border-bottom: 1px solid #ccc;
+}
+#goods_openpage_close{
+    float:right;
+    padding:0 5px ;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    color: #ccc;
+}
+#goods_openpage_close:hover{
+    color: black;
+    border: 1px solid black;
+}
+.goods_openpage_content{
+    margin-bottom: 50px;
+}
+.set_success{
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 100px;
+}
+#go_pay{
+    cursor: pointer;
+    float: left;
+    padding: 5px 28px;
+    margin-left: 250px;
+    background: red;
+    color: white;
+}
+#go_pay:hover{
+    opacity: 0.5;
+}
+#go_on_shop{
+    cursor: pointer;
+    float: left;
+    padding: 5px 20px;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+}
+#go_on_shop:hover{
+    color: red;
+    border-color:red; 
+}
+#special_shade{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index:800 ;
+    opacity: 0.5;
+    background: black;
+    top: 0;
+    left: 0;
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/goodsdetails.css">
     <script src="../js/jquery-1.12.4.js"></script>
+    <script src="./../js/goodsdetails.js"></script>
 </head>
 <style>
     .goods_messageSmall .selected{
@@ -66,9 +67,13 @@
                         </ul>
                     </div>
                 </div>
-                <!-- 编号 -->
-                <div class="productNum">
-                    商品编号:<span id="productNum">1024</span>
+                <!-- 编号 分享 点赞 -->
+                <div class="goods_message_bottom">
+                    <ul>
+                        <li>商品编号:<span id="productNum">706211</span></li>
+                        <li><div id="goods_share">分享</div></li>
+                        <li><div id="goods_like">点赞</div></li>
+                    </ul>
                 </div>
             </div>
             <!-- 商品右侧详细信息 -->
@@ -154,140 +159,34 @@
                         </dd>
                     </dl>
                 </div>
-            </div>
-            <!-- 加入购物车 --> 
-            <button id="addCar">加入购物袋</button>
+                <!-- 加入购物车 -->
+                <button id="addCar">加入购物袋</button>
+                <!-- 点击添加 弹出提示框。页面跳转，还是留在当前页面 -->
+                <div style="display:none;" class="goods_openpage">
+                    <div class="goods_openpage_top">提示<span id="goods_openpage_close">X</span></div>
+                    <div class="goods_openpage_content">
+                        <div class="set_success">加入购物袋成功!</div>
+                        <div id="go_pay">去结算</div>
+                        <div id="go_on_shop">继续购物</div>
+                    </div>
+                </div>
+                <!-- 浏览更多 温馨提示 -->
+                <div  class="goods_lookandremind">
+                    <div>浏览更多:&nbsp;<a href="javascript:void(0)" id="goods_lookmore">短袖T恤</a></div>
+                    <div class="goods_remind"><span>温馨提示:&nbsp;</span>
+                        <ul>
+                            <li>此商品不可退换</li>
+                            <li>此商品不可使用积分</li>
+                            <li>14天退换</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
        </div> 
-    </div>  
+    </div>
+    <div style="display:none;" id="special_shade"></div>
 </body>
 <script> 
-    glass();
-    /* 放大镜 */
-    function glass() {
-        var shadowWidth = $("#picture_shadow").width(),
-        shadowHeight = $("#picture_shadow").height(),
-        middleWidth = $(".goods_messageBig").width(),
-        middleHeight = $(".goods_messageBig").height(),
-        bigWidth = $(".more_picture").width(),
-        bigHeight = $(".more_picture").height();
-        var rateX = bigWidth/shadowWidth;
-        var rateY = bigHeight/shadowHeight;
-        $(".goods_messageBig").mouseover(function(){
-            $("#picture_shadow").show();
-            $(".more_picture").show();
-        }).mousemove(function(e){
-            //阴影跟随鼠标移动
-            var x = e.pageX,y = e.pageY;
-            $("#picture_shadow").offset({
-                top:y-shadowHeight/2,
-                left:x-shadowWidth/2
-            });
-            //限制阴影的移动范围
-            var moveRange = $("#picture_shadow").position(),
-            _top = moveRange.top,
-            _left = moveRange.left,
-            maxTop = middleHeight - shadowHeight,
-            maxLeft = middleWidth - shadowWidth;
-            if (_top < 0) {
-                _top = 0;
-            } else if(_top > maxTop){
-                _top = maxTop;
-            }
-            if (_left < 0) { 
-                _left = 0; 
-            } else if(_left> maxLeft){
-                _left = maxLeft;
-            }
-            $("#picture_shadow").css({
-                top:_top,
-                left:_left
-            });
-            //大图内的图片跟随阴影内图片进行变化
-            $(".more_picture img").css({
-                top:-rateY*_top,
-                left:-rateX*_left
-            });
-        });
-        $(".goods_messageBig").mouseout(function(){
-            $("#picture_shadow").hide();
-            $(".more_picture").hide();
-        });
-    }
-    /* 会员规则 */
-    $(".member_rules").hover(function(){
-        $(".rules_message").show();
-    },function(){
-        $(".rules_message").hide();
-    })
-    /* 选图片 */
-    $(".goods_messageSmall ul li").on("click",function(){
-        $(this).addClass("selected").siblings().removeClass("selected");
-        var thisSrc = $(this).children(0).attr("src");
-        $(".goods_messageBig img").attr("src",thisSrc);
-        $(".more_picture img").attr("src",thisSrc);
-    });
-    /* 选择颜色 */
-    $(".goods_color dl dd").on("click",function(){
-        if($(this).hasClass("active")){
-            $(this).removeClass("active");
-            $("#selectedColor").html("请选择颜色");
-        }else{
-           $(this).addClass("active").siblings().removeClass("active");
-            var thisName = $(this).children(0).attr("dataname");
-            $("#selectedColor").html(thisName);
-            var thisSrc = $(this).children(0).attr("src");
-            $(".goods_messageBig img").attr("src",thisSrc);
-            $(".more_picture img").attr("src",thisSrc); 
-        }  
-    });
-    /* 选择尺码 */
-    $(".goods_size dl dd div").on("click",function(){
-        if($(this).hasClass("active")){
-            $(this).removeClass("active");
-            $("#selectedSize").html("请选择尺码");
-        }else{
-            $(this).addClass("active").siblings().removeClass("active");
-            var thishtml = $(this).html();
-            $("#selectedSize").html(thishtml);
-        }
-    });
-    /* 数量 */
-    Number();
-    function Number(){
-        var minus = document.getElementById("minus");
-        var num = document.getElementById("num");
-        var add = document.getElementById("add"); 
-        var reminder = document.getElementById("num_reminder");
-        minus.onclick = function(){
-            var minusNum = num.value;
-            if (minusNum > 1) {
-                minusNum--;
-                num.value = minusNum;
-            }else{
-                reminder.style = "display:block";
-                setTimeout(function(){
-                    reminder.style = "display:none";
-                }, 1000);  
-            }
-        }
-        add.onclick = function(){
-            var addNum = num.value;
-            addNum++;
-            num.value = addNum;
-        }
-    }
-    /* 加入购物车 */
-    $("#addCar").on("click",function(){
-        /* 创建对象存储需要传的值 转化为json字符串格式*/
-        var details = new Object();
-        details.shopname = $("#goods_name").html();
-        details.goods_price = $("#goods_price").html();
-        details.original_price = $("#original_price").html();
-        details.num = $("#num").val();
-        details.color = $(".goods_color .active").children(0).attr("dataname");
-        details.shopimg = $(".goods_color .active").children(0).attr("src");
-        details.size = $(".goods_size .active").html();
-        var jsondetails = JSON.stringify(details);
-    });
+
 </script>
 </html>
