@@ -19,7 +19,7 @@
         <a href="#">手机注册</a>
     </div>
     <div class="zhuce_box">
-    <form action="#">
+    <form action="#" method="GET">
         <div class="zhuce_left">
             <h1>第一步：填写手机账户信息(以下内容必填)</h1>
             <div class="user">用户名:</div>
@@ -36,11 +36,11 @@
                 </div>
             <div class="verify">验证码:</div>
             <div class="verifyNum">
-                <input id="yzm" type="text" onfocus=autoFocus(yzm) onblur=autoBlurs(yzm,)>
+                <input id="yzm" type="text" onfocus=autoFocus(yzm) onblur=autoBlurs(yzm)>
                 <div class="vf">
                     123456
                 </div>
-                <p>请输入验证码</p>
+                <p></p>
                 <a onclick=fn()>换一张</a>
             </div>
             <button id="fsbtn">发送激活码</button>
@@ -109,29 +109,69 @@
         var yhm = document.getElementById("yhm");
         var sjh = document.getElementById("sjh");
         var yzm = document.getElementById("yzm");
+        var fsbtn = document.getElementById("fsbtn");
         var p = document.getElement
-        var yhmReg = /^([\u4e00-\u9fa5]|[a-zA-Z])(\w|[\u4e00-\u9fa5])$/;
+        var yhmReg = /^([\u4e00-\u9fa5]|[a-zA-Z])(\w|[\u4e00-\u9fa5]){1,19}$/;
+        var sjhReg = /^[^0][\d]{10}$/;
+        var yhmFlag = false;
+        var sjhFlag = false;
+        var yzmFlag = false;
         function fn(){/*给验证码盒子的文本内容添加随机验证码*/
             vf[0].innerText = captcha(4);
-        }
+        };
         fn();
         function autoFocus(item){
-                var items = item.parentNode.children;
-                items[2].style.display = "none"
-            }
+            var items = item.parentNode.children;
+            items[2].style.display = "none";
+        };
         function autoBlurs(item,reg){
             var items = item.parentNode.children;
             items[2].style.display = "block";
-            if(yhm.value == ""){
-               return items[2].innerText = "内容不能为空";
+            if(item.value == ""){
+                yhmFlag = false;
+                sjhFlag = false;
+                yzmFlag = false;
+                return items[2].innerText = "内容不能为空";
             }
-            if(reg){
-                reg.test(yhm.value);
-            }
-           
-            console.log(yhm.value);
+            if(item == yhm){
+                console.log(reg + ",,," + yhm.value)
+                if(reg.test(yhm.value)){
+                    yhmFlag = true;
+                    items[2].style.color = "green";
+                    return items[2].innerText = "用户名可用";
+                }else{
+                    yhmFlag = false;
+                    items[2].style.color = "red";
+                    return items[2].innerText = "以中、英文开头，与数字、下划线组成";
+                }
+            }else if(item == sjh){
+                if(reg.test(sjh.value)){
+                    sjhFlag = true;
+                    items[2].style.color = "green";
+                    return items[2].innerText = "手机号码可用";
+                }else{
+                    sjhFlag = false;
+                    items[2].style.color = "red";
+                    return items[2].innerText = "手机号码不合法";
+                }
+            }else if(item == yzm){
+                if(yzm.value == vf[0].innerText){
+                    yzmFlag = true;
+                    items[2].style.color = "green";
+                    return items[2].innerText = "验证码正确";
+                }else{
+                    yzmFlag = false;
+                    items[2].style.color = "red";
+                    return items[2].innerText = "验证码错误，请重新输入";
+                }
+            }               
         }
-        
+        fsbtn.onclick = function(){
+            if(yhmFlag & sjhFlag & yzmFlag){
+                location.replace(location.href = "./title.html");
+            }
+            return false;
+        }
     </script>
 </body>
 </html>
