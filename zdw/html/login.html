@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/login.css">
     <script src="../js/public.js"></script>
+    <script src="../../js/jquery-3.3.1.js"></script>
 </head>
 <body>
     <div class="logo">
@@ -23,19 +24,49 @@
         <div class="zhuce_left">
             <h1>第一步：填写手机账户信息(以下内容必填)</h1>
             <div class="user">用户名:</div>
-                <div class="user1">
+            <div class="user1">
                     <input id="yhm" type="text" name="asdf"  autofocus onfocus=autoFocus(yhm) onblur=autoBlurs(yhm,yhmReg)> 
                     <span>提示：请输入4-20个字符，一个汉字为两个字符，推荐使用中文会员名字。一旦注册成功，会员名将不能修改.</span>
                     <p></p>
-                </div>
+            </div>
+<!-- -------------我是分割线 ------------------------>
             <div class="user">手机号码:</div>
-                <div class="user1">
+            <div class="user1">
                     <input id="sjh" type="text" name="asdf"   onfocus=autoFocus(sjh) onblur=autoBlurs(sjh,sjhReg)> 
                     <span>请输入您的手机号.</span>
                     <p></p>
-                </div>
-            <div class="verify">验证码:</div>
-            <div class="verifyNum">
+            </div>
+<!-- -------------我是分割线 ------------------------>
+            <div class="user hd">登录密码:</div>
+            <div class="user1 hd">
+                <input id="mm" type="password" name="asdf"   onfocus=autoFocus(mm) onblur=autoBlurs(mm,mmReg)> 
+                <span>6-16个字符，请使用字母加数字或下划线的组合密码。</span>
+                <p></p>
+            </div>
+<!-- -------------我是分割线 ------------------------>
+            <div class="user hd">确认密码:</div>
+            <div class="user1 hd">
+                <input id="qrmm" type="password" name="asdf"   onfocus=autoFocus(qrmm) onblur=autoBlurs(qrmm)> 
+                <span>请再次输入密码。</span>
+                <p></p>
+            </div>
+<!-- -------------我是分割线 ------------------------>
+            <div class="user hd">激活码:</div>
+            <div class="user1 hd">
+                <input id="jhm" type="text" name="asdf"   onfocus=autoFocus(jhm) onblur=autoBlurs(jhm)> 
+                <span>请输入您的激活码。</span>
+                <p></p>
+            </div>
+<!-- -------------我是分割线 ------------------------>
+            <div class="user hd">邀请人号码:</div>
+            <div class="user1 hd">
+                    <input id="yqr" type="text" name="asdf"   onfocus=autoFocus(sjh) onblur=autoBlurs(sjh,sjhReg)> 
+                    <span>请输入邀请人账号绑定的手机号码。</span>
+                    <p></p>
+            </div>
+<!-- -------------我是分割线 ------------------------>
+            <div class="verify hd2">验证码:</div>
+            <div class="verifyNum hd2">
                 <input id="yzm" type="text" onfocus=autoFocus(yzm) onblur=autoBlurs(yzm)>
                 <div class="vf">
                     123456
@@ -43,6 +74,7 @@
                 <p></p>
                 <a onclick=fn()>换一张</a>
             </div>
+<!-- -------------我是分割线 ------------------------>
             <button id="fsbtn">发送激活码</button>
         </div>
     </form>
@@ -110,12 +142,20 @@
         var sjh = document.getElementById("sjh");
         var yzm = document.getElementById("yzm");
         var fsbtn = document.getElementById("fsbtn");
-        var p = document.getElement
+        var hd = document.getElementsByClassName("hd");
+        var hd2 = document.getElementsByClassName("hd2");
+        var mm = document.getElementById("mm");
+        var qrmm = document.getElementById("qrmm");
+        var jhm = document.getElementById("jhm");
         var yhmReg = /^([\u4e00-\u9fa5]|[a-zA-Z])(\w|[\u4e00-\u9fa5]){1,19}$/;
         var sjhReg = /^[^0][\d]{10}$/;
+        var mmReg = /^\w{6,18}$/;
         var yhmFlag = false;
         var sjhFlag = false;
         var yzmFlag = false;
+        var mmFlag = true;
+        var qrmmFlag = true;
+        var jhmFlag = true;
         function fn(){/*给验证码盒子的文本内容添加随机验证码*/
             vf[0].innerText = captcha(4);
         };
@@ -134,9 +174,15 @@
                 return items[2].innerText = "内容不能为空";
             }
             if(item == yhm){
-                console.log(reg + ",,," + yhm.value)
-                if(reg.test(yhm.value)){
-                    yhmFlag = true;
+                if(reg.test(yhm.value)){    
+                    $.get("../php/yhm.php",{"yhm":$("#yhm").val()},function(data){
+                        if(data.flag){
+                            yhmFlag = true;
+                        }else{
+                            yhmFlag = false;
+                        };
+                        return items[2].innerText = data.switch;
+                    },"json")
                     items[2].style.color = "green";
                     return items[2].innerText = "用户名可用";
                 }else{
@@ -163,15 +209,40 @@
                     yzmFlag = false;
                     items[2].style.color = "red";
                     return items[2].innerText = "验证码错误，请重新输入";
+                };
+            }else if(item == mm){
+                if(reg.test(mm.value)){
+                    mmFlag = false;
+                    items[2].style.color = "green";
+                    return items[2].innerText = "密码正确";
+                }else{
+                    mmFlag = true;
+                    items[2].style.color = "red";
+                    return items[2].innerText = "密码格式错误";
+                };
+            }else if(item == qrmm){
+                if(mm.value == qrmm.value){
+                    qrmmFlag = false;
+                    items[2].style.color = "green";
+                    return items[2].innerText = "密码一致";
+                }else{
+                    qrmmFlag = true;
+                    items[2].style.color = "red";
+                    return items[2].innerText = "密码不一致";
                 }
-            }               
-        }
+            }       
+        };
         fsbtn.onclick = function(){
             if(yhmFlag & sjhFlag & yzmFlag){
-                location.replace(location.href = "./title.html");
-            }
+                for(var i=0,len=hd.length;i < len;i ++){
+                    hd[i].style.display = "block";
+                };
+                hd2[0].style.display = "none";
+                hd2[1].style.display = "none";
+
+            };
             return false;
-        }
+        };
     </script>
 </body>
 </html>
